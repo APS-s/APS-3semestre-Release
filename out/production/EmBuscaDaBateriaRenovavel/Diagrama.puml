@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Badcell
+class Combate
+class Jogador
+class Mundo
+class APS
+
+Mundo <|-- Jogador
+
+class Badcell{
++_vida: int
++_ataque: int
++_defesa: int
+
++Badcell()
+}
+
+class Jogador{
++_vida: int
++_ataque: int
++_defesa: int
++posicaoJogadorLinha: int
++posicaoJogadorColuna: int
++input: Scanner
+
++moverJogador(): void
++Jogador()
+}
+
+class Mundo {
+#matriz: String[][]
+
++Mundo()
++printMatriz(): void
+}
+
+class Combate{
++Combate()
++Jdano()
++Idano()
+}
+
+class APS{
++_main(String[] args): void
+}
+@enduml
